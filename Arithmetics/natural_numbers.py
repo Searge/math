@@ -1,12 +1,12 @@
+
 N = int(input())
 list_int = [int(x) for x in str(N)]
 last_int = int(str(N)[-1:])
 last2_int = int(str(N)[-2:])
 Suma = sum(list_int)
 
-print(type(list_int))
-print(list_int)
-print('Сумма усіх цифр', '\t', '+'.join(str(list_int)), '=', Suma)
+
+print('Сумма усіх цифр', '\t', ' + '.join(str(x) for x in list_int), '=', Suma)
 print("Дві ост. цифри", "\t", last2_int)
 
 
