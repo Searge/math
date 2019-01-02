@@ -28,4 +28,4 @@ for x in range(0, WIDTH):
         # plot the point
         draw.point([x, y], (color, color, color))
 
-im.save('/output/mandelbrot_plot.png', 'PNG')
+im.save('mandelbrot_plot.png', 'PNG')
