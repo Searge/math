@@ -1,3 +1,4 @@
+# https://www.codingame.com/playgrounds/2358/how-to-plot-the-mandelbrot-set/mandelbrot-set
 from PIL import Image, ImageDraw
 from mandelbrot import mandelbrot, MAX_ITER
 from collections import defaultdict
