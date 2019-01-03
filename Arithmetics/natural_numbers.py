@@ -13,9 +13,6 @@ last2_int = int(str(N)[-2:])
 if len(list_int) > 2:
     first_minus_last = (int(str(N)[:-1]))
     first_minus_2_last = (int(str(N)[:-2]))
-    logic = ((first_minus_last * 3 + last_int) % 7)\
-        and (((first_minus_2_last * 2 + last2_int)) % 7)\
-        and ((first_minus_last + 5 * last_int) % 7)
 
 
 print('Сумма усіх цифр', '\t', ' + '.join(str(x) for x in list_int), '=', Suma)
@@ -50,9 +47,16 @@ if N % divider[2] == N % 3:
 
 
 if N == 7:
-    print(f"Число {N} ÷ {divider[7]} \t = {N / divider[7]}")
-elif logic == 0:
-    print(f"Число {N} ÷ {divider[7]} \t = {N / divider[7]}")
+    print(f"Число  \t {N} ÷ {divider[7]} = {N / divider[7]}")
+elif N % 7 == 0:
+    print(f"Число  \t {N} ÷ {divider[7]} = {N / divider[7]}")
+    print('\t Тому що:', '\n\t')
+    print(f"\t\t ({first_minus_last} * 3 + {last_int}) / 7\
+        = {(first_minus_last * 3 + last_int) / divider[7]}")
+    print(f"\t\t ({first_minus_2_last} * 2 + {last2_int}) / 7\
+        = {(first_minus_2_last * 2 + last2_int) / divider[7]}")
+    print(f"\t\t ({first_minus_last} + 5 * {last_int}) / 7\
+        = {(first_minus_last + 5 * last_int) / divider[7]}")
 
 
 def find_divider(N):
