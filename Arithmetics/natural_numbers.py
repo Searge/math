@@ -2,12 +2,20 @@
 N = int(input())
 
 divider = dict((i, i) for i in range(2, 20 + 1))
-
+large_div = (22, 25, 26, 27, 32, 33, 37, 49)
 
 list_int = [int(x) for x in str(N)]
+Suma = sum(list_int)
+
 last_int = int(str(N)[-1:])
 last2_int = int(str(N)[-2:])
-Suma = sum(list_int)
+
+if len(list_int) > 2:
+    first_minus_last = (int(str(N)[:-1]))
+    first_minus_2_last = (int(str(N)[:-2]))
+    logic = ((first_minus_last * 3 + last_int) % 7)\
+        and (((first_minus_2_last * 2 + last2_int)) % 7)\
+        and ((first_minus_last + 5 * last_int) % 7)
 
 
 print('Сумма усіх цифр', '\t', ' + '.join(str(x) for x in list_int), '=', Suma)
@@ -40,12 +48,11 @@ def div5(N):
 if N % divider[2] == N % 3:
     print("Число ділиться на 6", "\t", 'Так')
 
-logic = ((int(str(N)[:-1]) * 3 + int(str(N)[-1:])) % 7) \
-    and ((int(str(N)[:-2]) * 2 + int(str(N)[-2:])) % 7) \
-    and ((int(str(N)[:-1]) + 5 * int(str(N)[-1:])) % 7)
 
-if logic == 0:
-    print("Число ділиться на 7", "\t", 'Так')
+if N == 7:
+    print(f"Число {N} ÷ {divider[7]} \t = {N / divider[7]}")
+elif logic == 0:
+    print(f"Число {N} ÷ {divider[7]} \t = {N / divider[7]}")
 
 
 def find_divider(N):
