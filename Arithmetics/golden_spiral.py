@@ -2,6 +2,6 @@ import turtle
 
 a, b = 0, 1
 
-while b <= 13:
-    a, b = b, a + b
-    turtle.goto(a, b)
+fib_seq = lambda a, b: (b, a + b)
+
+print(fib_seq(0, 1))
