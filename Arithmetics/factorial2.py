@@ -5,4 +5,5 @@ def factorial2(n):
     return x
 
 
-print(factorial2(int(input('Write your number: '))))
+if __name__ == '__main__':
+    print(factorial2(int(input('Write your number: '))))
