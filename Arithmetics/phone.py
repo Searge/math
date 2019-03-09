@@ -36,5 +36,5 @@ for l in str(name):
         if num == int(l):
             letters_from_number.append(letter)
 
-print(f"""Число зі слова: {name}\n \
-      список можливих літер: \n {''.join(letters_from_number)}""")
+print(f"Число зі слова: {name}\n")
+print(f"Список можливих літер: \n {''.join(letters_from_number)}")
