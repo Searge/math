@@ -1,13 +1,15 @@
+from typing import List
+
 # Створюємо список літер a..o, та чисел 2..6 (в 3 екземплярах)
-alpha_o: str = [chr(i) for i in range(ord('a'), ord('p'))]
-nums_2_6: int = sorted(list(range(2, 7)) * 3)
+alpha_o: List[str] = [chr(i) for i in range(ord('a'), ord('p'))]
+nums_2_6: List[int] = sorted(list(range(2, 7)) * 3)
 
 # Об'єднуємо списки в словник
 n_first = dict(zip(alpha_o, nums_2_6))
 
 # Від p..z та 7..9 у 4-х
-alpha_z: str = [chr(i) for i in range(ord('p'), ord('z') + 1)]
-nums_7_9: int = sorted([7, 8, 9] * 4)
+alpha_z: List[str] = [chr(i) for i in range(ord('p'), ord('z') + 1)]
+nums_7_9: List[int] = sorted([7, 8, 9] * 4)
 
 n_rest = dict(zip(alpha_z, nums_7_9))
 
