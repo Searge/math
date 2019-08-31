@@ -13,3 +13,7 @@ def julia(c, z0):
         return MAX_ITER
 
     return n + 1 - log(log2(abs(z)))
+
+
+if __name__ == "__main__":
+    pass
