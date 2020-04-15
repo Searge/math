@@ -1,7 +1,7 @@
 from collections import deque
 
 
-def binary(n):
+def binary(n: int) -> str:
     temp = deque()
 
     while n > 0:
@@ -15,7 +15,8 @@ def binary(n):
 
     return ''.join(temp)
 
+
 if __name__ == '__main__':
     text = 'Enter the number to convert: '
     converted = binary(int(input(text)))
-    print(converted)
+    print(f'Your number is: {converted}')
