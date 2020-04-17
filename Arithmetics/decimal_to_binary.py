@@ -1,19 +1,18 @@
 from collections import deque
 
 
-def binary(n: int) -> str:
+def binary(number: int) -> str:
     temp = deque()
 
-    while n > 0:
-        if n % 2 == 1:
-            temp.appendleft('1')
-        else:
-            temp.appendleft('0')
-        n //= 2
+    while number:
+        modulo: int = number % 2
+        temp.appendleft(modulo)
+
+        number //= 2
 
     temp.appendleft('0b')
 
-    return ''.join(temp)
+    return ''.join(map(str, temp))
 
 
 if __name__ == '__main__':
